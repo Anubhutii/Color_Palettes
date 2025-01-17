@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 const DropdownMenu = () => {
   const navigate = useNavigate();
   return (
-    <div className="absolute  w-[600px] h-[540px] right-1 flex justify-center items-center top-0  bg-transparent  rounded-lg z-50 ">
-      <div className="  w-full h-[480px] right-1 bg-white shadow-lg rounded-lg z-50 border border-gray-200">
+    <div className="absolute  w-[600px] h-[500px] right-1 flex justify-center items-center top-0  bg-transparent  rounded-lg z-50 ">
+      <div className="  w-full h-[440px] right-1 bg-white shadow-lg rounded-lg z-50 border border-gray-200">
         <div className=" flex h-full">
           {/* Left Column */}
           <div className="w-[600px] border-r border-gray-200 p-5">
             <ul>
-              <li className=" pl-2 flex items-start py-4 gap-5 text-black text-lg cursor-pointer hover: hover:border-green-500 hover:bg-[#E9FCF6] hover:text-green-500 rounded-md">
+              <li className=" pl-2 flex items-start py-2 gap-3 text-black text-lg cursor-pointer hover: hover:border-green-500 hover:bg-[#E9FCF6] hover:text-green-500 rounded-md">
                 <div className="w-12 h-10 pt-0">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <g>
@@ -63,7 +63,7 @@ const DropdownMenu = () => {
 
               {/*------------------------------------------------------------------------------------------------------------------------ */}
 
-              <li className="flex items-start pl-2 py-4 gap-5 text-black text-lg cursor-pointer hover:bg-[#FFF2F9] hover:text-pink-500 rounded-md ">
+              <li className="flex items-start pl-2 py-2 gap-3 text-black text-lg cursor-pointer hover:bg-[#FFF2F9] hover:text-pink-500 rounded-md ">
                 <div className="w-12 h-10 pt-0">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <g>
@@ -124,7 +124,7 @@ const DropdownMenu = () => {
 
               {/*----------------------------------------------------------------------------------------------------------------------------------------------- */}
 
-              <li className="flex items-start pl-2 py-4  gap-5 rounded-md text-black cursor-default hover:bg-[#F2F7FF] hover:text-[#0067FB]">
+              <li className="flex items-start pl-2 py-2 gap-3 rounded-md text-black text-lg cursor-default hover:bg-[#F2F7FF] hover:text-[#0067FB]">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-10 pt-0">
                     <svg
@@ -157,7 +157,7 @@ const DropdownMenu = () => {
                       />
                     </svg>
                   </div>
-                  <div>
+                  <div onClick={() => navigate("/image_picker")}>
                     <span className="font-bold">Image Picker</span>
                     <p className="text-sm text-gray-500">
                       Get beautiful palettes from your photos
@@ -166,7 +166,7 @@ const DropdownMenu = () => {
                 </div>
               </li>
               {/*-------------------------------------------------------------------------------------------------------------------------------------- */}
-              <li className="flex items-start  pl-2 py-4 gap-5 rounded-md text-black cursor-default hover:bg-[#FEF9E6] hover:text-[#DAAB00]">
+              <li className="flex items-start  pl-2 py-2 gap-3 rounded-md text-black text-lg cursor-default hover:bg-[#FEF9E6] hover:text-[#DAAB00]">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-10 pt-0">
                     <svg
@@ -263,7 +263,7 @@ const DropdownMenu = () => {
                 </div>
               </li>
               {/*------------------------------------------------------------------------------------------------------------------------------------------------ */}
-              <li className="flex items-start  pl-2 py-4 rounded-md gap-5 text-black cursor-default hover:bg-[#F7F0FE] hover:text-[#802FDE]">
+              <li className="flex items-start  pl-2 py-2 rounded-md gap-3 text-black text-lg cursor-default hover:bg-[#F7F0FE] hover:text-[#802FDE]">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-10 pt-0">
                     <svg
@@ -381,7 +381,7 @@ const DropdownMenu = () => {
           </div>
         </div>
       </div>
-     </div>
+    </div>
   );
 };
 
