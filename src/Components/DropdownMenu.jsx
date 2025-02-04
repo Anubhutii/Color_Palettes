@@ -254,14 +254,15 @@ const DropdownMenu = () => {
                       </g>
                     </svg>
                   </div>
-                  <div>
-                    <span className="font-bold">Contrast Checker</span>
+                  <div onClick={() => navigate("/categories")}>
+                    <span className="font-bold">Palette for every Mood</span>
                     <p className="text-sm text-gray-500">
-                      Check the contrast between two colors
+                      Check the palette for your design
                     </p>
                   </div>
                 </div>
               </li>
+
               {/*------------------------------------------------------------------------------------------------------------------------------------------------ */}
               <li className="flex items-start  pl-2 py-2 rounded-md gap-3 text-black text-lg cursor-default hover:bg-[#F7F0FE] hover:text-[#802FDE]">
                 <div className="flex items-start gap-5">
@@ -274,12 +275,12 @@ const DropdownMenu = () => {
                     >
                       <style type="text/css">
                         {`
-            .st0 { fill: #ECD5FF; }
-            .st1 { fill: #BB7BFF; }
-            .st2 { fill: #A049FC; }
-            .st3 { fill: #DDB7FF; }
-            .st4 { fill: #7C23CD; }
-          `}
+                          .st0 { fill: #ECD5FF; }
+                          .st1 { fill: #BB7BFF; }
+                          .st2 { fill: #A049FC; }
+                          .st3 { fill: #DDB7FF; }
+                          .st4 { fill: #7C23CD; }
+                        `}
                       </style>
                       <path
                         className="st0"
@@ -321,7 +322,7 @@ const DropdownMenu = () => {
                       </g>
                     </svg>
                   </div>
-                  <div>
+                  <div onClick={() => navigate("/visualize")}>
                     <span className="font-bold">Palette Visualizer</span>
                     <p className="text-sm text-gray-500">
                       Preview your colors on real designs
@@ -337,45 +338,22 @@ const DropdownMenu = () => {
             className="w-72 pl-4 pt-4 font-sans bg-[#F7F7F8]   rounded-r-lg"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            <ul className="space-y-2">
-              <li className="text-black text-sm  hover:text-blue-600 cursor-pointer">
-                List of Colors
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
+            <ul className="space-y-4">
+              <li
+                onClick={() => navigate("/gradient")}
+                className="text-black text-sm hover:text-blue-600 cursor-pointer"
+              >
                 Browse Gradients
               </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Create a Gradient
+
+              <li 
+                onClick={() => navigate("/theme")}
+                className="text-black text-sm hover:text-blue-600 cursor-pointer">
+               Color palette Theme
               </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Make a Gradient Palette
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Color Picker
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Collage Maker
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                List of Fonts
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Image Converter
-              </li>
-            </ul>
-            <ul className="space-y-2">
-              <h3 className="text-black font-bold pt-3 pb-1 text-base">Apps</h3>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                iOS App
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Android App
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Figma Plugin
-              </li>
-              <li className="text-black text-sm hover:text-blue-600 cursor-pointer">
-                Adobe Extension
+              <li 
+              className="text-black text-sm hover:text-blue-600 cursor-pointer">
+                Explore Logo Palettes
               </li>
             </ul>
           </div>

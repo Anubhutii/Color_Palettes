@@ -33,7 +33,7 @@ const Product = () => {
     },
     {
       icon: <FaChrome />,
-      title: "Chrome Extension",
+      title: "Chrome",
       description: "Get and edit a palette every new tab.",
       hoverDetails: "Add to the Chrome",
       bgColor: "#E8E2F7",
@@ -58,7 +58,7 @@ const Product = () => {
           {/* Main Card Content */}
           <div className="flex flex-col items-center transition-all duration-300 ease-in-out group-hover:opacity-0 group-hover:translate-y-4 cursor-pointer">
             <div className="text-black text-6xl">{item.icon}</div>
-            <h2 className="text-lg font-bold">{item.title}</h2>
+            <h2 className="text-lg font-bold mt-5">{item.title}</h2>
             <p className="text-center text-gray-600">{item.description}</p>
           </div>
 

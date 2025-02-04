@@ -574,7 +574,7 @@ const Generator = () => {
                 className="relative flex flex-col justify-end items-center border-l-[0.1px] border-[#9e9e9e54] group "
                 style={{
                   backgroundColor: color,
-                  height: "635px",
+                  height: "670px",
                   width: `${100 / colors.length}%`, // Dynamic width based on the number of colors
                 }}
               >

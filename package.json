@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@hello-pangea/dnd": "^17.0.0",
     "antd": "^5.23.0",
     "canvas": "^3.0.1",
     "react": "^18.3.1",

@@ -12,6 +12,9 @@ import Visualize from './Components/visualize';
 import 'antd/dist/reset.css';
 import Categories from './Components/Categories';
 import ImagePicker from './Components/ImagePicker';
+import Gradient from './Components/Gradient';
+import Theme from './Components/Theme';
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,6 +38,8 @@ function App() {
         <Route path="/generator" element={<Generator />} />
         <Route path="/explore" element={<ExplorePalette />} />
         <Route path="/categories" element={<Categories/>}/>
+        <Route path='/gradient' element = {<Gradient />}/>
+        <Route path='/theme' element = {<Theme />}/>
         <Route path="/visualize" element={<Visualize />} />
         <Route path="/image_picker" element={<ImagePicker />}/>
       </Routes>

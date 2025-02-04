@@ -16,8 +16,7 @@ const Footer = () => {
               <li><a href="#" className="text-black hover:text-blue-600">Contrast checker</a></li>
               <li><a href="#" className="text-black hover:text-blue-600">Preview palettes on design</a></li>
               <li><a href="#" className="text-black hover:text-blue-600">Recolor your own design</a></li>
-              <li><a href="#" className="text-black hover:text-blue-600">Color picker</a></li>
-              <li><a href="#" className="text-black hover:text-blue-600">Browse free fonts</a></li>
+              
             </ul>
           </div>
 
@@ -30,8 +29,7 @@ const Footer = () => {
               <li><a href="#" className="text-black hover:text-blue-600">Create a gradient</a></li>
               <li><a href="#" className="text-black hover:text-blue-600">Make a gradient palette</a></li>
               <li><a href="#" className="text-black hover:text-blue-600">Image converter</a></li>
-              <li><a href="#" className="text-black hover:text-blue-600">Create a collage</a></li>
-              <li><a href="#" className="text-black hover:text-blue-600">Font Generator</a></li>
+              
             </ul>
           </div>
 
@@ -63,7 +61,7 @@ const Footer = () => {
       
       {/* Footer Bottom */}
       <div className="text-center text-gray-600 mt-8">
-        <p>&copy; colours by Anubhuti singh & Abhishek Shakya. All rights reserved.</p>
+        <p>&copy; colours by Anubhuti Singh & Abhishek Shakya. All rights reserved.</p>
       </div>
     </footer>
   )

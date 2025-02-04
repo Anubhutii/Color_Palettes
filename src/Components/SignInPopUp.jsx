@@ -19,7 +19,7 @@ const SignInPopup = ({ visible, onClose }) => {
         {/* Header */}
         <h1 className="text-3xl text-black font-bold text-center mb-2">Hello!</h1>
         <p className="text-gray-600 text-center mb-6">
-          Use your email or another service to continue with Coolors.
+          Use your email or another service to continue with Colours.
         </p>
 
         {/* Buttons */}

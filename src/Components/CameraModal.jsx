@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { FaCloudUploadAlt, FaSearch } from "react-icons/fa";
 import { MdOutlineRefresh } from "react-icons/md";
+import { useLocation } from "react-router-dom";
+import { use } from "react";
 
-const CameraModal = ({ closeModal }) => {
+const CameraModal = ({ onImageSelect, closeModal }) => {
   const [fileName, setFileName] = useState("");
   const [activeTab, setActiveTab] = useState("upload");
   const [urlInput, setUrlInput] = useState("");
@@ -13,8 +15,22 @@ const CameraModal = ({ closeModal }) => {
   const [stockImages, setStockImages] = useState([]); // Store fetched stock images
   const [loading, setLoading] = useState(false); // Loading state for stock images
   const [colors, setColors] = useState([]);
+  const currentPath = location.pathname;
 
   const PIXABAY_API_KEY = "48265800-6bd7de754bf306c0b92a49638"; // Replace with your Pixabay API key
+
+
+  const handleSelectImage = (imageUrl,colors) => {
+    onImageSelect(imageUrl , colors); // Pass image and colors to parent
+    closeModal(); // Close the modal
+  };
+
+  useEffect(()=>{
+  console.log(imageUrl, colors);
+  if(imageUrl && currentPath === "/image_picker"){
+    handleSelectImage(imageUrl,colors);
+  }
+  },[imageUrl,colors])
 
   // Function to extract random colors from the image
   const extractRandomColors = (img) => {
@@ -55,7 +71,6 @@ const CameraModal = ({ closeModal }) => {
 
     setColors(randomColors);
   };
-
   // Handle file selection from browse
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -67,13 +82,17 @@ const CameraModal = ({ closeModal }) => {
       reader.onload = () => {
         const img = new Image();
         img.src = reader.result;
+
         img.onload = () => {
           setImageUrl(reader.result);
           extractRandomColors(img);
-          setShowImagePopup(true);
+          if(currentPath !== '/image_picker' ){
+            setShowImagePopup(true);
+          }
         };
       };
       reader.readAsDataURL(file);
+
     }
   };
 
@@ -88,7 +107,10 @@ const CameraModal = ({ closeModal }) => {
 
       img.onload = () => {
         extractRandomColors(img);
-        setShowImagePopup(true);
+        if(currentPath !== '/image_picker' ){
+          setShowImagePopup(true);
+        }
+        
       };
 
       img.onerror = () => {
@@ -115,7 +137,7 @@ const CameraModal = ({ closeModal }) => {
       const response = await fetch(
         `https://pixabay.com/api/?key=${PIXABAY_API_KEY}&q=${encodeURIComponent(
           query
-        )}&image_type=photo&per_page=27&page=1`
+        )}&image_type=photo&per_page=50&page=1`
       );
       const data = await response.json();
 
@@ -145,6 +167,8 @@ const CameraModal = ({ closeModal }) => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [stockSearch]);
+
+
 
   return (
     <div className="absolute top-0 left-0 w-full h-full bg-[#7F7F7F] bg-opacity-60 flex items-center justify-center overflow-hidden z-50">
@@ -268,7 +292,9 @@ const CameraModal = ({ closeModal }) => {
 
                     img.onload = () => {
                       extractRandomColors(img);
-                      setShowImagePopup(true);
+                      if(currentPath !== '/image_picker' ){
+                        setShowImagePopup(true);
+                      }
                     };
                     img.onerror = () => {
                       alert("Failed to process the stock image.");
