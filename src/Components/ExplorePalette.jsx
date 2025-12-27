@@ -16,13 +16,13 @@ const ExplorePalette = () => {
 
   return (
     <div>
-      <div className="flex gap-5 h-16 text-base items-center p-8 border-b-2 border-gray-200 ">
+      {/* <div className="flex gap-5 h-16 text-base items-center p-8 border-b-2 border-gray-200 ">
         <FaSearch size={20} />
         <p>Search with color, topics, style or hex values...</p>
-      </div>
+      </div> */}
 
       <div className="text-center ">
-        <h1 className="text-6xl font-bold text-black mt-24">
+        <h1 className="text-4xl md:text-6xl font-bold text-black mt-5">
           Trending Color Palettes
         </h1>
         <h3 className="text-xl text-gray-600 mt-7">
@@ -36,7 +36,7 @@ const ExplorePalette = () => {
         </h3>
       </div>
 
-      <div className="grid grid-cols-4 gap-5 h-[100vh] mt-5 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 h-[100vh] mt-5 p-4">
         {palettes.map((palette, paletteIndex) => (
           <div key={paletteIndex}>
             <div className="rounded-md overflow-hidden hover:shadow-xl">

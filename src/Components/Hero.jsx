@@ -38,13 +38,13 @@ const Hero = () => {
     <section className="flex flex-col md:flex-row items-center justify-center bg-white min-h-screen">
       {/* Text Section */}
       <div className="md:w-1/2 items-center justify-center text-left flex flex-col space-y-4">
-        <h1 className="text-[60px] font-bold max-w-[700px] pl-16 text-gray-800">
+        <h1 className="text-[60px] font-bold max-w-[700px] px-10 md:pl-16  text-gray-800">
           The <span className="text-blue-500">ultimate tool</span> for
           generating
           <span className="text-pink-500"> color</span> palettes instantly!
         </h1>
 
-        <p className="text-gray-600 text-[18px]">
+        <p className="text-gray-600 text-[18px] px-5 text-center ">
           Create stunning color palettes with ease using our super-fast
           generator.
         </p>
@@ -63,7 +63,7 @@ const Hero = () => {
 
         <Link to="/categories">
           <button className="border border-gray-300 text-black w-[200px] py-3 rounded-lg hover:border-gray-800">
-          Palette for every mood !
+            Palette for every mood !
           </button>
         </Link>
       </div>
@@ -71,11 +71,12 @@ const Hero = () => {
       {/* Illustration Section */}
       <div className="md:w-1/2 flex justify-center items-end mt-8 md:mt-10 relative">
         {/* Desktop Screen */}
-        <div className="absolute w-[700px] h-[500px] bg-white rounded-md shadow-lg right-[-200px] md:right-[-150px] bottom-[-10px] cursor-pointer"
-        onClick={()=>navigate("/explore")}>
+        <div
+          className={`absolute hidden md:block w-[700px] h-[500px] bg-white rounded-md shadow-lg right-[-200px] md:right-[-150px] bottom-[-10px] cursor-pointer`}
+          onClick={() => navigate("/explore")}
+        >
           {/* Bezel */}
           <div className="absolute top-0 left-0 right-0 bottom-0 border-[8px] border-black rounded-md flex items-center justify-center overflow-hidden">
-            {/* Screen */}
             <div className="relative w-full h-full p-3">
               <img
                 style={{
@@ -107,8 +108,12 @@ const Hero = () => {
         </div>
 
         {/* Laptop Screen */}
-        <div className="relative w-[400px] h-[260px] bg-gray-200 rounded-md shadow-lg top-24 right-44 group cursor-pointer" 
-        onClick={()=>{navigate("/generator")}}>
+        <div
+          className={`hidden md:block relative w-[400px] h-[260px] bg-gray-200 rounded-md shadow-lg top-24 right-44 group cursor-pointer`}
+          onClick={() => {
+            navigate("/generator");
+          }}
+        >
           {/* Bezel */}
           <div className="absolute top-0 left-0 right-0 bottom-0 border-[8px] border-black rounded-t-md flex items-center justify-center">
             {/* Screen */}
